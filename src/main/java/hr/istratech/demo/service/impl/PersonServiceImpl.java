@@ -5,6 +5,7 @@ import hr.istratech.demo.repository.PersonRepository;
 import hr.istratech.demo.service.PersonService;
 import org.apache.logging.log4j.util.Strings;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +16,7 @@ import java.util.stream.Collectors;
 public class PersonServiceImpl implements PersonService {
     private PersonRepository personRepository;
 
-    public PersonServiceImpl(PersonRepository personRepository) {
+    public PersonServiceImpl( PersonRepository personRepository ) {
         this.personRepository = personRepository;
     }
 
@@ -26,23 +27,25 @@ public class PersonServiceImpl implements PersonService {
 
 
     @Override
-    public Person getPersonById( long personId  ) {
-        final Optional<Person> person = personRepository.findById(personId);
+    public Person getPersonById( long personId ) {
+        final Optional<Person> person = personRepository.findById( personId );
         return person.get();
     }
 
     @Override
-    public Person savePerson(Person person) {
-        return personRepository.save(person);
+    public Person savePerson( Person person ) {
+        return personRepository.save( person );
     }
-    @Override
-    public void deleteUserById(long id) {
-        personRepository.deleteById(id);
-    }
-    @Override
-    public List<Person> getAllPersonsFilterByName(String Name) {
 
-        if (Strings.isBlank(Name) )
+    @Override
+    public void deleteUserById( long id ) {
+        personRepository.deleteById( id );
+    }
+
+    @Override
+    public List<Person> getAllPersonsFilterByName( String Name ) {
+
+        if ( Strings.isBlank( Name ) )
             return getAllPersons();
 
         return personRepository.findAllByImeIgnoreCase( Name );
@@ -52,7 +55,6 @@ public class PersonServiceImpl implements PersonService {
 //                .collect(Collectors.toList());
 
     }
-
 
 
 }
