@@ -12,7 +12,7 @@ To set up the project locally, follow these steps:
 
 1. Clone the repository:
    ```shell
-   git clone https://github.com/[your-username]/[your-repo].git
+   git clone https://github.com/HRyohni/JavaSpringTemplate.git
    ```
 
 2. Install the necessary dependencies using [dependency management tool]:
