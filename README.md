@@ -16,11 +16,6 @@ To set up the project locally, follow these steps:
    ```
 
 2. Install the necessary dependencies using [dependency management tool]:
-   ```shell
-   [command to install dependencies]
-   ```
-
-3. [Additional installation steps, if applicable]
 
 ## Usage
 After completing the installation, you can run the project by following these instructions:
